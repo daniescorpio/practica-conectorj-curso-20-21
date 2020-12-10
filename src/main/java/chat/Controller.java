@@ -28,9 +28,9 @@ public class Controller {
     public Controller () {
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.mariadb.jdbc.Driver");
 
-            String url = "jdbc:mysql://" + DB_SERVER + ":" + DB_PORT + "/" + DB_NAME;
+            String url = "jdbc:mariadb://" + DB_SERVER + ":" + DB_PORT + "/" + DB_NAME;
             this.conn = DriverManager.getConnection(url, DB_USER, DB_PASS);
 
         } catch (Exception e) {
